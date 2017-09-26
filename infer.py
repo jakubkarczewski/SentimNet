@@ -6,8 +6,8 @@ from data_utils.preprocessing import encode_sentences, tokenize_sentences
 
 
 def main():
-    classifier = Classifier("data/logs/run_3/best_model/model.meta",
-                            "data/logs/run_3/best_model/model")
+    classifier = Classifier("data/best_model/model.meta",
+                            "data/best_model/model")
     sentences = [["0",  "I like vegetables."]]
     tokenized_sentences = tokenize_sentences(sentences)
     encoded_sentences, _ = encode_sentences(tokenized_sentences, 32)
