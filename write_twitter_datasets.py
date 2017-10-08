@@ -5,10 +5,10 @@ import tweepy
 
 
 def _configure_connection():
-    ckey = "uwQoag4aBHKJcFsOsKi8q94iS"
-    csecret = "rz89scxAxLla6OQDmNUyQ0TFCZt5L4IT6XoVzBEfRmcuRTgvS2"
-    atoken = "878227501880946688-zaypdJupSY5bQOYg6DIbGTwIp3JlF50"
-    asecret = "hafrjgx2zoIVATBLmb4HppsaDiQLLkZGZjqfYXK6D6qSc"
+    ckey = ""
+    csecret = ""
+    atoken = "-"
+    asecret = ""
 
     OAUTH_KEYS = {'consumer_key': ckey,
                   'consumer_secret': csecret,
