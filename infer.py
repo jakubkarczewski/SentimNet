@@ -14,6 +14,13 @@ def main():
     result = classifier.infer(encoded_sentences)
     print(result)
 
-
+def classify(tweet_body):
+    sentences = [["0", tweet_body]]
+    tokenized_sentences = tokenize_sentences(sentences)
+    encoded_sentences, _ = encode_sentences(tokenized_sentences, 32)
+    result = classifier.infer(encoded_sentences)
+    return result
+    
+    
 if __name__ == "__main__":
     main()
