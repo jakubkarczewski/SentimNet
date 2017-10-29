@@ -17,7 +17,3 @@ def split_datasets(file_path, sheet_number, dir_name):
     for one_day in all_days:
         one_day.to_csv('./nasdaq_tweets/%s.csv' % one_day['Date'].iloc[2])
 
-
-# if __name__ == '__main__':
-#     split_datasets('corp_tweets/export_dashboard_aapl_2016_06_15_14_30_09.xlsx',
-#                    1, 'nasdaq_tweets')
