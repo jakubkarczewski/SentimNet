@@ -145,6 +145,7 @@ class BasicModel:
                                           lstm_out.shape[-1], NUM_OF_CLASSES)
         self._scores = tf.nn.softmax(self._output)
         self._predictions = tf.argmax(self._output, axis=1)
+        import pdb; pdb.set_trace()
 
     def _build_training_nodes(self):
         """ Create training nodes. """

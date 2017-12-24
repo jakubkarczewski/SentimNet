@@ -1,5 +1,6 @@
 import csv
 import subprocess
+import time
 from datetime import date
 from datetime import timedelta
 import tweepy
@@ -35,14 +36,17 @@ def collect_tweets(dataset_filters, dir_name, limit=0):
     raw_data = []
 
     for dataset_filter in dataset_filters:
+        print('Collecting data for %s' % dataset_filter[0])
         collected_tweets = tweepy.Cursor(api.search,
                                          since=dataset_filter[1],
                                          until=dataset_filter[2],
                                          q=dataset_filter[0],
                                          lang="en").items(limit)
-        parsed_tweets = [(tweet.retweet_count, tweet.text) for tweet
-                         in collected_tweets]
+        parsed_tweets = [tweet.text for tweet in collected_tweets]
         raw_data.append(parsed_tweets)
+        print('Waiting for %s' % dataset_filter[0])
+        #time.sleep(950)
+        print('Finished waiting for %s' % dataset_filter[0])
 
     for raw_dataset, dataset_filter in zip(raw_data, dataset_filters):
         with open('%s/%s_from_%s.csv' % (dir_name,
@@ -75,8 +79,10 @@ def collect_tweets_weekly(start_date, end_date, stock_filters, dir_name,
 
 
 if __name__ == '__main__':
-    if(collect_tweets_weekly(date(2017, 10, 21), date(2017, 10, 28),
-                             ('@tesla', '@google'), 'searched_tweets'), 30):
+    if(collect_tweets_weekly(date(2017, 11, 17), date(2017, 11, 18),
+                             ('@Tesla', '@Google', '@Apple', '@Facebook',
+                              '@Intel', '@Nvidia', '@Microsoft'),
+                             'searched_tweets', 600)):
         print("Datasets ready.")
     else:
         print("Something went wrong.")
