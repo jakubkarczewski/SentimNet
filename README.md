@@ -8,6 +8,8 @@ Network achieves a little more than 80% of validation accuracy on binary classif
 
 **Work in progress**
 
+![alt text](https://github.com/jakubkarczewski/SentimNet/blob/master/charts/google/cena_i_sent_dla_Google.png "100x100")
+
 We are currently exploring correlation between company's stock price and sentiment extracted from tweets related to this company, as this neural network might be useful in predicting stock prices. So far, content of this repository has been used as a part of engineering thesis project by one of the authors. Thesis can be found [here](https://drive.google.com/file/d/1qKr3eurZMnV9fHgVFisPL_mB73luzb86/view?usp=sharing).
 
 ## Dataset
