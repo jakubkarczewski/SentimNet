@@ -32,7 +32,7 @@ class BasicModel:
 
     def train(
             self, dataset, learning_rate=0.001, desired_loss=0.001,
-            max_iterations=1000000, decay_interval=10, decay_rate=1.0,
+            max_iterations=100000, decay_interval=10, decay_rate=1.0,
             save_interval=1000, best_save_interval=200,
             validation_interval=200, lstm_dropout=0.0, batch_size=50
     ):
@@ -145,7 +145,6 @@ class BasicModel:
                                           lstm_out.shape[-1], NUM_OF_CLASSES)
         self._scores = tf.nn.softmax(self._output)
         self._predictions = tf.argmax(self._output, axis=1)
-        import pdb; pdb.set_trace()
 
     def _build_training_nodes(self):
         """ Create training nodes. """
