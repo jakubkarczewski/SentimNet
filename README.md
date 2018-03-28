@@ -15,3 +15,7 @@ We are currently exploring correlation between company's stock price and sentime
 ## Dataset
 
 Download datasetes from [here](http://help.sentiment140.com/for-students/).
+
+
+##
+This project is licensed under the terms of the MIT license.
