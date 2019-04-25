@@ -4,10 +4,10 @@ import pandas as pd
 
 
 #Twitter API credentials
-consumer_key = "uwQoag4aBHKJcFsOsKi8q94iS"
-consumer_secret = "rz89scxAxLla6OQDmNUyQ0TFCZt5L4IT6XoVzBEfRmcuRTgvS2"
-access_key = "878227501880946688-zaypdJupSY5bQOYg6DIbGTwIp3JlF50"
-access_secret = "hafrjgx2zoIVATBLmb4HppsaDiQLLkZGZjqfYXK6D6qSc"
+consumer_key = ""
+consumer_secret = ""
+access_key = ""
+access_secret = ""
 
 
 def get_all_tweets(screen_name):
